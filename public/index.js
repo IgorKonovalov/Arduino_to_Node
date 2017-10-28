@@ -6,6 +6,7 @@ socket.on('connected', () => {
 socket.on('disconnect', () => {
   console.log('Socket Disconnected')
 })
+
 socket.on('data', data => {
-    document.body.setAttribute('style', `background-color: hsl(${Math.round(data/3)}, 100%, 50%)`)
+  document.body.setAttribute('style', `background-color: hsl(${Math.round(data/3)}, 100%, 50%)`)
 })

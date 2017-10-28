@@ -1,7 +1,7 @@
 {
-  "name": "Arduino_Node_Socket",
+  "name": "one",
   "version": "1.0.0",
-  "description": "Simple node server for sending arduino data to browser",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "serialport": "^6.0.0",
-    "socket.io": "^2.0.3"
+    "serialport": "^6.0.4",
+    "socket.io": "^2.0.4"
   }
 }
