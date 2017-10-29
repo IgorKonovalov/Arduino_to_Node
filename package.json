@@ -1,5 +1,5 @@
 {
-  "name": "one",
+  "name": "Arduino_Node_SocketIO",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Igor Konovalov",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
