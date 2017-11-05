@@ -15,14 +15,15 @@ const sPort = new serialport('/dev/tty.usbserial-DN02BJH9', {
   baudRate: 9600
 })
 const parser = new sp_readline()
+sPort.pipe(parser);
 
 sPort.on('open', () => {
   console.log('Serial Port Opened')
   let lastValue
   io.on('connection', socket => {
     socket.emit('connected')
+    let lastValue // we use additional variable to avoid constant sending data to connected socket
     parser.on('data', data => {
-      let lastValue // we use additional variable to avoid constant sending data to connected socket
       if (lastValue !== data) {
         socket.emit('data', data)
       }
